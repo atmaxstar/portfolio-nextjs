@@ -1,7 +1,58 @@
 import Link from "next/link"
 import { Github, Linkedin, Mail, MapPin } from "lucide-react"
+import { useState } from "react"
 
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  })
+  const [status, setStatus] = useState<{
+    type: "success" | "error" | "sending" | null
+    message: string
+  }>({ type: null, message: "" })
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setStatus({ type: "sending", message: "" })
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setStatus({
+          type: "success",
+          message: "Message sent successfully!",
+        })
+        setFormData({ name: "", email: "", subject: "", message: "" })
+      } else {
+        throw new Error(data.error || "Failed to send message")
+      }
+    } catch (error) {
+      setStatus({
+        type: "error",
+        message: "Failed to send message. Please try again.",
+      })
+    }
+  }
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
+  }
+
   return (
     <section id="contact" className="py-24 px-4 md:px-8">
       <div className="container mx-auto">
@@ -26,7 +77,7 @@ export default function ContactSection() {
                     href="mailto:contact@example.com"
                     className="text-lg font-medium hover:text-[#1a9cb3] transition-colors"
                   >
-                    contact@example.com
+                    haniyasusin@gmail.com
                   </a>
                 </div>
               </div>
@@ -35,53 +86,102 @@ export default function ContactSection() {
                 <MapPin className="text-[#1a9cb3] mr-6" size={28} />
                 <div>
                   <p className="text-sm font-medium text-gray-500">Location</p>
-                  <p className="text-lg font-medium">Tokyo, Japan</p>
+                  <p className="text-lg font-medium">Christchurch, New Zealand</p>
                 </div>
               </div>
             </div>
 
             <div className="flex space-x-6">
               <Link
-                href="https://github.com/atmaxstar"
+                href={process.env.NEXT_PUBLIC_GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="social-icon"
               >
                 <Github size={24} />
               </Link>
-              <Link href="#" target="_blank" rel="noopener noreferrer" className="social-icon">
+              <Link href={process.env.NEXT_PUBLIC_LINKEDIN_URL} target="_blank" rel="noopener noreferrer" className="social-icon">
                 <Linkedin size={24} />
               </Link>
             </div>
           </div>
 
           <div className="glass-card hover-lift p-8">
-            <form className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="form-label">
                   Name
                 </label>
-                <input type="text" id="name" className="form-input" placeholder="John Doe" />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="form-input"
+                  placeholder="John Doe"
+                  required
+                />
               </div>
               <div>
                 <label htmlFor="email" className="form-label">
                   Email
                 </label>
-                <input type="email" id="email" className="form-input" placeholder="example@email.com" />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="form-input"
+                  placeholder="example@email.com"
+                  required
+                />
               </div>
               <div>
                 <label htmlFor="subject" className="form-label">
                   Subject
                 </label>
-                <input type="text" id="subject" className="form-input" placeholder="Project Inquiry" />
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  className="form-input"
+                  placeholder="Project Inquiry"
+                  required
+                />
               </div>
               <div>
                 <label htmlFor="message" className="form-label">
                   Message
                 </label>
-                <textarea id="message" rows={6} className="form-input" placeholder="Your message here..."></textarea>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows={6}
+                  className="form-input"
+                  placeholder="Your message here..."
+                  required
+                ></textarea>
               </div>
-              <button type="submit" className="btn-primary w-full py-4 flex items-center justify-center text-lg">
+              {status.message && (
+                <div
+                  className={`p-4 rounded ${
+                    status.type === "success" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+                  }`}
+                >
+                  {status.message}
+                </div>
+              )}
+              <button
+                type="submit"
+                className="btn-primary w-full py-4 flex items-center justify-center text-lg"
+                disabled={status.type === "sending"}
+              >
                 Send Message
               </button>
             </form>

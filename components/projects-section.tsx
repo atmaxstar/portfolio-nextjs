@@ -12,9 +12,47 @@ export default function ProjectsSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="glass-card hover-lift overflow-hidden">
-            <div className="project-image-container h-64">
+            <div className="project-image-container h-96">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src="/create_ehon.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="project-image-overlay">
+                <div className="project-links">
+                  <Link href="https://childraw.vercel.app/" className="project-link-btn" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink size={18} /> Live Demo
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-8">
+              <h3 className="text-3xl font-bold mb-4 gradient-text">Childraw</h3>
+              <p className="mb-4 text-lg">
+                This is the app for children to create picture books with combination of symple words.
+              </p>
+
+              <h4 className="text-xl font-bold mb-3">Technologies</h4>
+              <div className="flex flex-wrap gap-3 mb-6">
+                <span className="tech-tag">Next.js</span>
+                <span className="tech-tag">Tailwind CSS</span>
+                <span className="tech-tag">Flask</span>
+                <span className="tech-tag">Image Generation</span>
+                <span className="tech-tag">OAuth</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="glass-card hover-lift overflow-hidden">
+            <div className="project-image-container h-96">
               <Image
-                src="/placeholder.svg?height=400&width=600"
+                src="/intelts.png?height=400&width=600"
                 alt="Intelts App Screenshot"
                 width={600}
                 height={400}
@@ -22,10 +60,10 @@ export default function ProjectsSection() {
               />
               <div className="project-image-overlay">
                 <div className="project-links">
-                  <Link href="#" className="project-link-btn">
+                  <Link href="https://github.com/atmaxstar/intelts" className="project-link-btn" target="_blank" rel="noopener noreferrer">
                     <Github size={18} /> GitHub
                   </Link>
-                  <Link href="#" className="project-link-btn">
+                  <Link href="https://intelts.vercel.app/" className="project-link-btn" target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={18} /> Live Demo
                   </Link>
                 </div>
@@ -49,43 +87,7 @@ export default function ProjectsSection() {
               </div>
             </div>
           </div>
-
-          <div className="glass-card hover-lift overflow-hidden">
-            <div className="project-image-container h-64">
-              <Image
-                src="/placeholder.svg?height=400&width=600"
-                alt="My Chat App Screenshot"
-                width={600}
-                height={400}
-                className="w-full h-full object-cover"
-              />
-              <div className="project-image-overlay">
-                <div className="project-links">
-                  <Link href="#" className="project-link-btn">
-                    <Github size={18} /> GitHub
-                  </Link>
-                  <Link href="#" className="project-link-btn">
-                    <ExternalLink size={18} /> Live Demo
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="p-8">
-              <h3 className="text-3xl font-bold mb-4 gradient-text">My Chat App</h3>
-              <p className="mb-4 text-lg">
-                This is the app for real-time chatting. It allows multiple users to communicate in a group.
-              </p>
-
-              <h4 className="text-xl font-bold mb-3">Technologies</h4>
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="tech-tag">Next.js</span>
-                <span className="tech-tag">Tailwind CSS</span>
-                <span className="tech-tag">Socket.io</span>
-                <span className="tech-tag">MongoDB</span>
-              </div>
-            </div>
-          </div>
+          
         </div>
       </div>
     </section>

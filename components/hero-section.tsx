@@ -25,7 +25,7 @@ export default function HeroSection() {
               <Link href="#contact" className="btn-primary flex items-center">
                 Contact Me <Mail size={18} className="ml-1" />
               </Link>
-              <a href="/resume.pdf" download className="btn-secondary flex items-center">
+              <a href="/Atsutoshi_Honda_Resume.pdf" download className="btn-secondary flex items-center">
                 Download Resume <Download size={18} className="ml-1" />
               </a>
             </div>
@@ -36,10 +36,10 @@ export default function HeroSection() {
               <div className="profile-image-bg"></div>
               <div className="profile-image">
                 <Image
-                  src="/placeholder.svg?height=250&width=250"
+                  src="/5741.jpg?height=400&width=400"
                   alt="Profile"
-                  width={250}
-                  height={250}
+                  width={400}
+                  height={400}
                   className="object-cover"
                 />
               </div>

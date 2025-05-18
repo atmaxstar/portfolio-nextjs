@@ -47,10 +47,10 @@ export default function SkillsSection() {
               <div>
                 <div className="flex justify-between mb-2">
                   <span className="font-medium">JavaScript/TypeScript</span>
-                  <span className="text-sm">85%</span>
+                  <span className="text-sm">90%</span>
                 </div>
                 <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: skillsVisible ? "85%" : "0%" }}></div>
+                  <div className="skill-progress" style={{ width: skillsVisible ? "90%" : "0%" }}></div>
                 </div>
               </div>
               <div>
@@ -65,16 +65,16 @@ export default function SkillsSection() {
               <div>
                 <div className="flex justify-between mb-2">
                   <span className="font-medium">Next.js</span>
-                  <span className="text-sm">85%</span>
+                  <span className="text-sm">90%</span>
                 </div>
                 <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: skillsVisible ? "85%" : "0%" }}></div>
+                  <div className="skill-progress" style={{ width: skillsVisible ? "90%" : "0%" }}></div>
                 </div>
               </div>
               <div>
                 <div className="flex justify-between mb-2">
                   <span className="font-medium">Tailwind CSS</span>
-                  <span className="text-sm">95%</span>
+                  <span className="text-sm">85%</span>
                 </div>
                 <div className="skill-bar">
                   <div className="skill-progress" style={{ width: skillsVisible ? "95%" : "0%" }}></div>
@@ -83,10 +83,10 @@ export default function SkillsSection() {
               <div>
                 <div className="flex justify-between mb-2">
                   <span className="font-medium">Material UI</span>
-                  <span className="text-sm">80%</span>
+                  <span className="text-sm">90%</span>
                 </div>
                 <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: skillsVisible ? "80%" : "0%" }}></div>
+                  <div className="skill-progress" style={{ width: skillsVisible ? "90%" : "0%" }}></div>
                 </div>
               </div>
             </div>
@@ -97,16 +97,7 @@ export default function SkillsSection() {
             <div className="space-y-6">
               <div>
                 <div className="flex justify-between mb-2">
-                  <span className="font-medium">Node.js</span>
-                  <span className="text-sm">85%</span>
-                </div>
-                <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: skillsVisible ? "85%" : "0%" }}></div>
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium">Express</span>
+                  <span className="font-medium">Golang</span>
                   <span className="text-sm">80%</span>
                 </div>
                 <div className="skill-bar">
@@ -115,7 +106,16 @@ export default function SkillsSection() {
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span className="font-medium">MongoDB</span>
+                  <span className="font-medium">Spring Boot</span>
+                  <span className="text-sm">85%</span>
+                </div>
+                <div className="skill-bar">
+                  <div className="skill-progress" style={{ width: skillsVisible ? "85%" : "0%" }}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span className="font-medium">Flask</span>
                   <span className="text-sm">75%</span>
                 </div>
                 <div className="skill-bar">
@@ -125,15 +125,6 @@ export default function SkillsSection() {
               <div>
                 <div className="flex justify-between mb-2">
                   <span className="font-medium">PostgreSQL</span>
-                  <span className="text-sm">70%</span>
-                </div>
-                <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: skillsVisible ? "70%" : "0%" }}></div>
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium">Firebase</span>
                   <span className="text-sm">80%</span>
                 </div>
                 <div className="skill-bar">
@@ -142,11 +133,11 @@ export default function SkillsSection() {
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span className="font-medium">Prisma</span>
-                  <span className="text-sm">85%</span>
+                  <span className="font-medium">SQL</span>
+                  <span className="text-sm">80%</span>
                 </div>
                 <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: skillsVisible ? "85%" : "0%" }}></div>
+                  <div className="skill-progress" style={{ width: skillsVisible ? "80%" : "0%" }}></div>
                 </div>
               </div>
             </div>
@@ -175,25 +166,7 @@ export default function SkillsSection() {
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span className="font-medium">AWS</span>
-                  <span className="text-sm">70%</span>
-                </div>
-                <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: skillsVisible ? "70%" : "0%" }}></div>
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium">Vercel</span>
-                  <span className="text-sm">95%</span>
-                </div>
-                <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: skillsVisible ? "95%" : "0%" }}></div>
-                </div>
-              </div>
-              <div>
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium">CI/CD</span>
+                  <span className="font-medium">OAuth</span>
                   <span className="text-sm">80%</span>
                 </div>
                 <div className="skill-bar">
@@ -202,11 +175,20 @@ export default function SkillsSection() {
               </div>
               <div>
                 <div className="flex justify-between mb-2">
-                  <span className="font-medium">Agile/Scrum</span>
-                  <span className="text-sm">85%</span>
+                  <span className="font-medium">Prisma</span>
+                  <span className="text-sm">90%</span>
                 </div>
                 <div className="skill-bar">
-                  <div className="skill-progress" style={{ width: skillsVisible ? "85%" : "0%" }}></div>
+                  <div className="skill-progress" style={{ width: skillsVisible ? "90%" : "0%" }}></div>
+                </div>
+              </div>
+              <div>
+                <div className="flex justify-between mb-2">
+                  <span className="font-medium">Ent</span>
+                  <span className="text-sm">80%</span>
+                </div>
+                <div className="skill-bar">
+                  <div className="skill-progress" style={{ width: skillsVisible ? "80%" : "0%" }}></div>
                 </div>
               </div>
             </div>
