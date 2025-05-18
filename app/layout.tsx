@@ -22,7 +22,39 @@ const caveat = Caveat({
 export const metadata: Metadata = {
   title: "Atsutoshi Honda - Portfolio",
   description: "Atsutoshi Honda のポートフォリオサイト",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+  icons: {
+    icon: '/icon.png',
+    apple: '/icon.png',
+  },
+  openGraph: {
+    title: "Atsutoshi Honda - Portfolio",
+    description: "Atsutoshi Honda のポートフォリオサイト",
+    type: "website",
+    locale: "ja_JP",
+    images: [
+      {
+        url: "/icon.png",
+        width: 1200,
+        height: 630,
+        alt: "Atsutoshi Honda Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Atsutoshi Honda - Portfolio",
+    description: "Atsutoshi Honda のポートフォリオサイト",
+    images: ["/icon.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
 }
 
 export default function RootLayout({
