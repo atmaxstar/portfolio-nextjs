@@ -57,6 +57,7 @@ export default function ProjectsSection() {
                 width={600}
                 height={400}
                 className="w-full h-full object-cover"
+                unoptimized
               />
               <div className="project-image-overlay">
                 <div className="project-links">
