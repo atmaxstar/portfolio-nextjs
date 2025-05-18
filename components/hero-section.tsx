@@ -47,11 +47,11 @@ export default function HeroSection() {
           </div>
         </div>
 
-        <div className="scroll-indicator">
+        {/* <div className="scroll-indicator">
           <span className="scroll-indicator-text">Scroll Down</span>
           <ArrowDown size={20} className="mb-2 text-[#1a9cb3]" />
           <div className="scroll-indicator-line"></div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
