@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { Home, Briefcase, Code2, Mail, Pickaxe } from "lucide-react"
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("home")
@@ -55,31 +56,36 @@ export default function Header() {
             href="#home"
             className={`nav-link text-white px-2 py-1 ${activeSection === "home" ? "active-nav" : ""}`}
           >
-            Home
+            <span className="hidden md:inline">Home</span>
+            <Home className="md:hidden w-5 h-5" />
           </Link>
           <Link
             href="#projects"
             className={`nav-link text-white px-2 py-1 ${activeSection === "projects" ? "active-nav" : ""}`}
           >
-            Projects
+            <span className="hidden md:inline">Projects</span>
+            <Code2 className="md:hidden w-5 h-5" />
           </Link>
           <Link
             href="#skills"
             className={`nav-link text-white px-2 py-1 ${activeSection === "skills" ? "active-nav" : ""}`}
           >
-            Skills
+            <span className="hidden md:inline">Skills</span>
+            <Pickaxe className="md:hidden w-5 h-5" />
           </Link>
           <Link
             href="#career"
             className={`nav-link text-white px-2 py-1 ${activeSection === "career" ? "active-nav" : ""}`}
           >
-            Career
+            <span className="hidden md:inline">Career</span>
+            <Briefcase className="md:hidden w-5 h-5" />
           </Link>
           <Link
             href="#contact"
             className={`nav-link text-white px-2 py-1 ${activeSection === "contact" ? "active-nav" : ""}`}
           >
-            Contact
+            <span className="hidden md:inline">Contact</span>
+            <Mail className="md:hidden w-5 h-5" />
           </Link>
         </nav>
       </header>

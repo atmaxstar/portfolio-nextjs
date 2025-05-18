@@ -5,7 +5,10 @@ export default function CareerSection() {
     <section id="career" className="py-24 px-4 md:px-8">
       <div className="container mx-auto">
         <div className="section-title-box mb-16">
-          <h2 className="handwritten text-3xl font-bold">Experience</h2>
+          <h2 className="handwritten text-3xl font-bold flex items-center">
+            <Briefcase className="mr-2" size={28} />
+            Experience
+          </h2>
         </div>
 
         <div className="relative">

@@ -1,13 +1,16 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Github, ExternalLink } from "lucide-react"
+import { Github, ExternalLink, Code2 } from "lucide-react"
 
 export default function ProjectsSection() {
   return (
     <section id="projects" className="py-24 px-4 md:px-8">
       <div className="container mx-auto">
         <div className="section-title-box mb-16">
-          <h2 className="handwritten text-3xl font-bold">Projects</h2>
+          <h2 className="handwritten text-3xl font-bold flex items-center">
+            <Code2 className="mr-2" size={28} />
+            Projects
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">

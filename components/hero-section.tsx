@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { ChevronRight, Mail, Download, ArrowDown } from "lucide-react"
+import { ChevronRight, Mail, Download, ArrowDown, Home } from "lucide-react"
 
 export default function HeroSection() {
   return (

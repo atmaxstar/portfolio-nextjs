@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useState, useEffect } from "react"
+import { Pickaxe } from "lucide-react"
 
 export default function SkillsSection() {
   const skillsRef = useRef<HTMLDivElement>(null)
@@ -28,7 +29,10 @@ export default function SkillsSection() {
     <section id="skills" className="py-24 px-4 md:px-8" ref={skillsRef}>
       <div className="container mx-auto">
         <div className="section-title-box mb-16">
-          <h2 className="handwritten text-3xl font-bold">Skills</h2>
+          <h2 className="handwritten text-3xl font-bold flex items-center">
+            <Pickaxe className="mr-2" size={28} />
+            Skills
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
