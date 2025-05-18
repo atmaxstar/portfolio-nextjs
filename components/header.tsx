@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Home, Briefcase, Code2, Mail, Pickaxe } from "lucide-react"
+import Image from "next/image"
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState("home")
@@ -47,45 +48,66 @@ export default function Header() {
         ></div>
       </div>
 
-      <header className="glass-nav fixed top-0 left-0 w-full p-4 flex justify-between items-center z-40">
-        <h1 className="text-white text-2xl font-bold">
-          <span className="handwritten">Atsutoshi Honda</span>
-        </h1>
+      <header className="glass-nav fixed top-0 left-0 w-full px-6 flex justify-between items-center z-40">
+        <Link href="#home" className="flex items-center">
+          <Image
+            src="/icon_clear.png"
+            alt="Atsutoshi Honda"
+            width={80}
+            height={80}
+            className="object-contain w-20 h-20 lg:w-[120px] lg:h-[120px]"
+          />
+        </Link>
         <nav className="flex space-x-6">
           <Link
             href="#home"
             className={`nav-link text-white px-2 py-1 ${activeSection === "home" ? "active-nav" : ""}`}
           >
-            <span className="hidden md:inline">Home</span>
-            <Home className="md:hidden w-5 h-5" />
+            <span className="hidden lg:flex text-lg lg:text-xl lg:flex-col lg:items-center">
+              <Home className="mb-1 w-5 h-5" />
+              Home
+            </span>
+            <Home className="lg:hidden w-5 h-5" />
           </Link>
           <Link
             href="#projects"
             className={`nav-link text-white px-2 py-1 ${activeSection === "projects" ? "active-nav" : ""}`}
           >
-            <span className="hidden md:inline">Projects</span>
-            <Code2 className="md:hidden w-5 h-5" />
+            <span className="hidden lg:flex text-lg lg:text-xl lg:flex-col lg:items-center">
+              <Code2 className="mb-1 w-5 h-5" />
+              Projects
+            </span>
+            <Code2 className="lg:hidden w-5 h-5" />
           </Link>
           <Link
             href="#skills"
             className={`nav-link text-white px-2 py-1 ${activeSection === "skills" ? "active-nav" : ""}`}
           >
-            <span className="hidden md:inline">Skills</span>
-            <Pickaxe className="md:hidden w-5 h-5" />
+            <span className="hidden lg:flex text-lg lg:text-xl lg:flex-col lg:items-center">
+              <Pickaxe className="mb-1 w-5 h-5" />
+              Skills
+            </span>
+            <Pickaxe className="lg:hidden w-5 h-5" />
           </Link>
           <Link
             href="#career"
             className={`nav-link text-white px-2 py-1 ${activeSection === "career" ? "active-nav" : ""}`}
           >
-            <span className="hidden md:inline">Career</span>
-            <Briefcase className="md:hidden w-5 h-5" />
+            <span className="hidden lg:flex text-lg lg:text-xl lg:flex-col lg:items-center">
+              <Briefcase className="mb-1 w-5 h-5" />
+              Career
+            </span>
+            <Briefcase className="lg:hidden w-5 h-5" />
           </Link>
           <Link
             href="#contact"
             className={`nav-link text-white px-2 py-1 ${activeSection === "contact" ? "active-nav" : ""}`}
           >
-            <span className="hidden md:inline">Contact</span>
-            <Mail className="md:hidden w-5 h-5" />
+            <span className="hidden lg:flex text-lg lg:text-xl lg:flex-col lg:items-center">
+              <Mail className="mb-1 w-5 h-5" />
+              Contact
+            </span>
+            <Mail className="lg:hidden w-5 h-5" />
           </Link>
         </nav>
       </header>
