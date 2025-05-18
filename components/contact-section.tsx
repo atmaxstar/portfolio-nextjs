@@ -64,7 +64,7 @@ export default function ContactSection() {
           <div className="flex flex-col justify-center">
             <h3 className="text-4xl font-bold mb-6 gradient-text">Get In Touch</h3>
             <p className="text-xl mb-10 leading-relaxed">
-              Feel free to contact me for project inquiries or any questions you might have. I'm always open to new
+              Feel free to contact me for inquiries or any questions you might have. I'm always open to new
               opportunities and collaborations.
             </p>
 
@@ -149,7 +149,7 @@ export default function ContactSection() {
                   value={formData.subject}
                   onChange={handleChange}
                   className="form-input"
-                  placeholder="Project Inquiry"
+                  placeholder="Inquiry"
                   required
                 />
               </div>
